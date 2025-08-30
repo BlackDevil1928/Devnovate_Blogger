@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
+# 📝 Vibe Blog Platform  
 
-## Project info
+A modern blogging platform built with **React (Vite + TypeScript)**, **TailwindCSS**, and **Supabase**.  
+It supports **user authentication (email & Google OAuth)**, **blog publishing**, and an **Admin Dashboard** for moderation with role-based access.  
 
-**URL**: https://lovable.dev/projects/f22face6-f19e-43dd-b837-da963b3857d2
+---
 
-## How can I edit this code?
+## ✨ Features  
 
-There are several ways of editing your application.
+- 🔐 **Authentication**
+  - Email + Password signup & login  
+  - Google OAuth integration  
+  - Role-based access (User vs Admin)  
 
-**Use Lovable**
+- 📝 **Blogging**
+  - Users can create and submit blogs  
+  - Blogs are stored in Supabase with `status = pending`  
+  - Only approved blogs are visible publicly  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f22face6-f19e-43dd-b837-da963b3857d2) and start prompting.
+- ⚙️ **Admin Dashboard**
+  - Accessible only to users with `role = admin`  
+  - View pending blogs  
+  - Approve ✅ or Reject ❌ blogs  
+  - Secure with Supabase **Row Level Security (RLS)**  
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🎨 **Modern UI**
+  - TailwindCSS + Shadcn UI components  
+  - Dark theme admin panel  
+  - Responsive design  
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tech Stack  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend**: React (Vite + TypeScript), TailwindCSS, Shadcn UI  
+- **Backend**: Supabase (Postgres + Auth + RLS policies)  
+- **Auth**: Email/Password, Google OAuth (via Supabase)  
+- **Deployment**: Vercel / Netlify (frontend), Supabase cloud  
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Getting Started  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 1. Clone the repo
+```bash
+  git clone https://github.com/your-username/vibe-blog.git
+  cd vibe-blog 
+```
+Install dependencies:
+```bash
+  npm install
+  or
+  bun install
+```
+Setup environment variables
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Create a .env file in the project root:
+```
+ VITE_SUPABASE_URL=your-supabase-url
+ VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
+Run development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Future Scope
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+🖼 Add blog images (Supabase Storage)
 
-**Use GitHub Codespaces**
+💬 Add comments & likes system
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+📡 Realtime blog approval notifications
 
-## What technologies are used for this project?
+📱 Mobile-friendly PWA version
 
-This project is built with:
+🧠 AI-powered blog summaries & recommendations
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# 📜 License
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f22face6-f19e-43dd-b837-da963b3857d2) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+MIT License © 2025 — Built with ❤️ for VIBE Hackathon 2025
