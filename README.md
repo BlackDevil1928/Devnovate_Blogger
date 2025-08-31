@@ -14,7 +14,7 @@ It supports **user authentication (email & Google OAuth)**, **blog publishing**,
 
 - 📝 **Blogging**
   - Users can create and submit blogs  
-  - Blogs are stored in Supabase with `status = pending`  
+  - Blogs are stored in Supabase with `status= pending`  
   - Only approved blogs are visible publicly  
 
 - ⚙️ **Admin Dashboard**
